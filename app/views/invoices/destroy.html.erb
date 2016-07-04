@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row" style="margin-top:8%">
+  <div class="col-md-2"></div>
+  <div class="col-md-1 col-temp">
+    <div class="jumbotron" style="background-color:#606060; height:354px">
+      <button type="button" class="btn btn-transparent col-md-12" onclick="location.href='/products';"> Products </button>
+      <button type="button"  class="btn btn-yellow col-md-12" onclick="location.href='/invoices';"> Invoices </button>
+    </div>
+  </div>
+  <div class="col-md-7 col-temp">
+    <div class="jumbotron">
+      <div class="">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-11">
+            <ol class="breadcrumb">
+              <li>Invoices</li>
+              <li>Invoices List</li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-8">
+            <form role="search">
+              <div class="form-group col-md-10">
+                <input type="text" class="form-control" placeholder="Search by contact details or product names">
+              </div>
+              <button type="submit" class="btn btn-default col-md-2">Search</button>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-success" onclick="location.href='/invoices/new';"> + New Invoice </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Invoice Number</th>
+                  <th>Customer</th>
+                  <th>Products</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @invoices.each do |invoice| %>
+                  <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+                  <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+                  <% @subInvoice.each do |sub| %>
+                    <% i += 1 %>
+                    <% if i == 1 %>
+                      <% prod += sub.quantity.to_s + " x " + sub.product %>
+                    <% elsif i < 3 %>
+                      <% prod += ", " + sub.quantity.to_s + " x " + sub.product %>
+                    <% end %> 
+                    <% totalAmount += sub.amount; name = sub.customer_name; date = sub.invoice_date.strftime("%e %B %Y") %>
+                  <% end %>
+                  <% if i >= 3 %>
+                    <% prod += " and  " + (i - 2).to_s + " more" %>
+                  <% end %>
+                  <tr>
+                    <td width="12%"><%= date %></td>
+                    <td width="10%"><%= invoice.invoice %></td>
+                    <td width="17%"><%= name %></td>                    
+                    <td width="53%"><%= prod %></td>
+                    <td width="8%"><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-8"></div>
+          <div class="col-md-4" style="padding-left:5%">
+            <nav>
+              <ul class="pagination">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo; Prev</span></a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">Next &raquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+            

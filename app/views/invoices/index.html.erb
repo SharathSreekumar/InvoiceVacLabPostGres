@@ -1,0 +1,98 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row" style="margin-top:5%">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8 col-md-12">
+    <div class="jumbotron col-temp" style="background-color:#606060">
+      <div class="row">
+        <div class="col-md-2 col-sm-12 col-btn-sidebar">
+          <button type="button" class="btn btn-transparent col-md-12" onclick="location.href='/products';"> Products </button>
+          <button type="button"  class="btn btn-yellow col-md-12" onclick="location.href='/invoices';"> Invoices </button>
+        </div>
+        <div class="col-md-10 col-sm-12">
+          <div class="jumbotron col-temp" style="padding-top:40px;margin-bottom:0px;margin-left:-15px">
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-11 col-sm-11">
+                <ol class="breadcrumb">
+                  <li>Invoices</li>
+                  <li>Invoices List</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-8 col-sm-8">
+                <%= form_tag(invoices_path, :method => "get", id: "search-form", :role => "search") do %>
+                  <div class="form-group col-md-10 col-sm-9">
+                    <%= text_field_tag :search, params[:search], :class => "form-control",  :placeholder => "Search by contact details or product names" %>
+                  </div>
+                  <%= submit_tag "Search", :name => nil, :class => "btn btn-default col-md-2" %>
+                <% end %>
+              </div>
+              <div class="col-md-3 co-sm-3">
+                <button type="button" class="btn btn-success" onclick="location.href='/invoices/new';"> + New Invoice </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-10 col-sm-10">
+                <table class="table" id="tableInvoice">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Invoice Number</th>
+                      <th>Customer</th>
+                      <th>Products</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody><!-- display invoice & other details -->
+                    <% @invoices.each do |invoice| %>
+                      <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+                      <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+                      <% @subInvoice.each do |sub| %>
+                        <% i += 1 %>
+                        <% if i == 1 %>
+                          <% prod += sub.quantity.to_s + " x " + sub.product %>
+                        <% elsif i < 3 %>
+                          <% prod += ", " + sub.quantity.to_s + " x " + sub.product %>
+                        <% end %> 
+                        <% totalAmount += sub.amount; name = sub.customer_name; date = sub.invoice_date.strftime("%e %B %Y") %>
+                      <% end %>
+                      <% if i >= 3 %>
+                        <% prod += " and  " + (i - 2).to_s + " more" %>
+                      <% end %>
+                      <tr>
+                        <td width="12%"><%= date %></td>
+                        <td width="10%"><%= invoice.invoice %></td>
+                        <td width="17%"><%= name %></td>                    
+                        <td width="53%"><%= prod %></td>
+                        <td width="8%"><%= totalAmount.to_s %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-1 col-sm-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-8"></div>
+              <div class="col-md-4 col-sm-4" style="padding-left:5%">
+                <nav>
+                  <ul class="pagination">
+                    <input type="hidden" id="start" value="0" />
+                    <input type="hidden" id="end" value="5" />
+                    <li><a href="#" aria-label="Previous" onclick="onPrev()"><span aria-hidden="true">&laquo; Prev</span></a></li>
+                    <li><a href="#" aria-label="Next" onclick="onNext()"><span aria-hidden="true">Next &raquo;</span></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2"></div>
+</div>

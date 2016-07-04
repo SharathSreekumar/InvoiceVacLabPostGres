@@ -1,0 +1,164 @@
+<div class="row" style="margin-top:5%">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+    <div class="jumbotron col-temp" style="background-color:#606060">
+      <div class="row">
+        <div class="col-md-2 col-sm-2 col-btn-sidebar">
+          <button type="button" class="btn btn-transparent col-md-12" onclick="location.href='/products';"> Products </button>
+          <button type="button"  class="btn btn-yellow col-md-12" onclick="location.href='/invoices';"> Invoices </button>
+        </div>
+        <div class="col-md-10 col-sm-10">
+          <div class="jumbotron col-temp" style="padding-top:40px;margin-bottom:0px;margin-left:-15px">
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-10 col-sm-10">
+                <ol class="breadcrumb">
+                  <li><a href="/invoices">Invoices</a></li>
+                  <li>New Invoice</li>
+                </ol>
+              </div>
+              <div class="col-md-1 col-sm-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-10 col-sm-10">
+                <%= form_for(@invoice) do |f| %>
+                  <% if @invoice.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+                      <ul>
+                        <% @invoice.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="field">
+                        <%= f.label :customer_name %><br>
+                        <%= f.text_field :customer_name, :class => "form-control" %>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="field">
+                        <% num = Invoice.last.invoice[3..5].to_i + 1 %>
+                        <% invoiceNew = Invoice.last.invoice[0..2]; cnt = 3 - num.to_s.length - 1 %>
+                        <% for i in 0..cnt %>
+                          <% invoiceNew += "0" %>
+                        <% end %>
+                        <% invoiceNew += num.to_s %>
+                        <%= f.label :invoice %><br>
+                        <%= f.text_field :invoice, :class => "form-control", :value => invoiceNew %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="field">
+                        <%= f.label :customer_phone %><br>
+                        <%= f.number_field :customer_phone, :class => "form-control" %>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="field">
+                        <%= f.label :invoice_date %><br>
+                        <% #f.date_select :invoice_date, :class => "form-control" %>
+                        <input type="date" name="invoice[date]" class="form-control" value=<%= Time.now %>/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="field">
+                        <%= f.label :customer_email %><br>
+                        <%= f.text_field :customer_email, :class => "form-control" %>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <table class="table" id="newTable">
+                        <tbody>
+                          <tr><!--for new product row-->
+                            <td style="width:40%">
+                              <div class="field form-group">
+                                <h6><strong>Product</strong></h6>
+                                <% f.collection_select :product, Product.order(:product_name),:product_name,:product_name , :class => "form-control" %>
+                                <input type="hidden" id="product_name" name="ProdName[]"/>
+                                <select class="form-control" id="product" name="Product[]" onchange="overrideLink(this)">
+                                  <option>-- Select Product --</option>
+                                  <% Product.all.each do |product| %>
+                                    <option value=<%= product.rate %>><%= product.product_name %></option>
+                                  <% end %>
+                                  <option>Custom (Fish curry rice, extra)</option>
+                                </select>
+                              </div>
+                            </td>
+                            <td style="width:10%">
+                              <div class="field form-group">
+                                <h6><strong>Rate</strong></h6>
+                                <%= f.text_field :rate, :class => "form-control", :name => 'Rate[]' %>
+                                <a href="" id="overLink" style="display:none">Override</a>
+                              </div>
+                            </td>
+                            <td style="width:10%">
+                              <div class="field form-group">
+                                <h6><strong>Quantity</strong></h6>
+                                <%= f.number_field :quantity, :class => "form-control", :onchange => "amount(this)", :min => 1, :value => 1, :name => 'Quantity[]' %>
+                              </div>
+                            </td>
+                            <td style="width:15%">
+                              <div class="field form-group">
+                                <h6><strong>Amount</strong></h6>
+                                <%= f.text_field :amount, :class => "form-control", :name => 'Amount[]' %>
+                              </div>
+                            </td>
+                            <td style="width:20%">
+                              <div class="actions" style="padding-top:35px">
+                                <button type="button" class="btn" style="padding: 3px 12px; display:block;" name="Remove[]" onclick="deleteTableRow(this)">Remove</button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr><!-- for add button table row-->
+                            <td style="width:40%">
+                              <div class="field form-group">
+                                <h6><strong>Product</strong></h6> 
+                                <% f.collection_select :product, Product.order(:product_name),:product_name,:product_name , :class => "form-control" %>
+                                <select class="form-control" id="product" onchange="overrideLink()" disabled>
+                                  <option>-- Select Product --</option>
+                                  <% Product.all.each do |product| %>
+                                    <option value=<%= product.rate %>><%= product.product_name %></option>
+                                  <% end %>
+                                  <option>Custom</option>
+                                </select>
+                              </div>
+                            </td>
+                            <td style="width:10%"></td>
+                            <td style="width:10%"></td>
+                            <td style="width:15%"></td>
+                            <td style="width:20%">
+                              <div class="actions" style="padding-top:35px;">
+                                <button type="button" class="btn" style="padding: 3px 26px" onclick="addTableRow()">Add</button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="actions">
+                        <button type="submit" class="btn btn-success">Create Invoice</button>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-md-1 col-sm-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2"></div>
+</div>

@@ -1,0 +1,44 @@
+html, body {
+	width : 100%;
+	background-color : #f0f0f0;
+}
+
+.jumbotron {
+	background-color: #ffffff;
+}
+
+.breadcrumb {
+	background-color: transparent;
+}
+
+.pagination>li>a, .pagination>li>span {
+	padding: 6px 15px;
+}
+
+.col-btn-sidebar{
+	padding-top:48px;
+	padding-right:0px;
+}
+
+.col-temp {
+	padding: 0px 0px;
+	/*padding-left: 0px;
+	padding-top: 0px;
+	top: 0px;*/
+}
+
+.btn-yellow {
+    color: #000;
+    background-color: #f3ef73;
+    border-color: # #f3ef73;
+}
+
+.btn-transparent {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.form-control_1{
+	width:50%;
+}

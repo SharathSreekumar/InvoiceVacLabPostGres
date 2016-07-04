@@ -1,0 +1,60 @@
+<div class="row" style="margin-top:5%">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8 col-md-12">
+    <div class="jumbotron col-temp" style="background-color:#606060">
+      <div class="row">
+        <div class="col-md-2 col-sm-12 col-btn-sidebar">
+          <button type="button" class="btn btn-yellow col-md-12" onclick="location.href='/products';"> Products </button>
+          <button type="button"  class="btn btn-transparent col-md-12" onclick="location.href='/invoices';"> Invoices </button>
+        </div>
+        <div class="col-md-10 col-sm-12">
+          <div class="jumbotron col-temp" style="padding-top:40px;margin-bottom:0px;margin-left:-15px;height:300px">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-11 col-sm-11">
+                <ol class="breadcrumb">
+                  <li><a href="/products">Products</a></li>
+                  <li>Create Product</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-10">
+                <%= form_for(@product) do |f| %>
+                  <% if @product.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+                      <ul>
+                        <% @product.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
+                  <div class="row">
+                    <div class="field col-md-6">
+                      <%= f.label :product_name %>
+                      <%= f.text_field :product_name, :class => "form-control" %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="field col-md-6">
+                    <%= f.label :rate %><br>
+                    <%= f.text_field :rate, :class => "form-control" %>
+                    </div>
+                  </div>
+                  <div class="actions row col-md-12">
+                    <button type="submit"  class="btn btn-success">Create Product</button>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2"></div>
+</div>

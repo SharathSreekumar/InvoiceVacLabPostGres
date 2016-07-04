@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  customer_phone: 1
+  customer_email: MyString
+  invoice: MyString
+  invoice_date: 2016-07-04 16:45:45
+  product: MyString
+  rate: 1.5
+  quantity: 1
+  amount: 1.5
+
+two:
+  customer_name: MyString
+  customer_phone: 1
+  customer_email: MyString
+  invoice: MyString
+  invoice_date: 2016-07-04 16:45:45
+  product: MyString
+  rate: 1.5
+  quantity: 1
+  amount: 1.5
