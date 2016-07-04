@@ -568,3 +568,81 @@ Processing by InvoicesController#index as HTML
   [1m[35mInvoice Load (3.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices"
   Rendered invoices/index.html.erb within layouts/application (11.0ms)
 Completed 200 OK in 232ms (Views: 222.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/invoices" for ::1 at 2016-07-04 22:49:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (33.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InvoicesController#index as HTML
+  [1m[35mInvoice Load (12.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices"
+  Rendered invoices/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 1591ms (Views: 1488.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/style.self-fbe3ff28bd7e363b09d95506d9bedd1e1ed10ac2be2fef507be0fc81d8667f58.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-04 22:49:15 +0530
+
+
+Started GET "/products" for ::1 at 2016-07-04 22:49:19 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (124.1ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY rate asc[0m
+  Rendered products/index.html.erb within layouts/application (307.2ms)
+Completed 200 OK in 456ms (Views: 152.1ms | ActiveRecord: 298.2ms)
