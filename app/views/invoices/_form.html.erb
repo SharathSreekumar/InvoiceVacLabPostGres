@@ -42,8 +42,11 @@
                     </div>
                     <div class="col-md-6 col-sm-6">
                       <div class="field">
-                        <% num = Invoice.last.invoice[3..5].to_i + 1 %>
-                        <% invoiceNew = Invoice.last.invoice[0..2]; cnt = 3 - num.to_s.length - 1 %>
+                        <% if Invoice.last == nil %>
+                          <% num = 1;invoiceNew = "INV";cnt = 3 - num.to_s.length - 1 %>
+                        <% else %>
+                          <% num = Invoice.last.invoice[3..5].to_i + 1; invoiceNew = Invoice.last.invoice[0..2]; cnt = 3 - num.to_s.length - 1 %>
+                        <% end %>
                         <% for i in 0..cnt %>
                           <% invoiceNew += "0" %>
                         <% end %>
