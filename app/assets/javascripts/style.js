@@ -68,13 +68,20 @@ function overrideLink(indexX){ // gets the value from the dropdown & assigns the
 	var x = $(indexX).closest('tr').index();
 	
 	var table = document.getElementById("newTable");
-	
+	var tableSize = $("#newTable > tbody > tr").size();
 	if(indexX.options[indexX.selectedIndex].text.search("Custom") == -1){
 		var index = indexX.selectedIndex;
 		$(table.rows.item(x).cells[1]).find('a').attr("href","/products/"+ index +"/edit");
 		$(table.rows.item(x).cells[1]).find('a').css('display','block');
 		$(table.rows.item(x).cells[1]).find('input').val(indexX.value);
-		$(table.rows.item(x).cells[0]).find('input').val($(indexX).children(':selected').text());
+		$(table.rows.item(x).cells[0]).find('input').val($(indexX).children(':selected').text());// fetch text & assign
+
+		//var productName = document.getElementsByName("Product");
+		for (var i = 0; i < tableSize - 1 ; i++){
+			if(i != x){
+				$(table.rows.item(i).cells[0]).find('select').children('option')[index].style.display="none";
+			}
+		}
 	}else{
 		$(table.rows.item(x).cells[1]).find('a').attr("href","");
 		$(table.rows.item(x).cells[1]).find('a').css('display','none');
@@ -110,6 +117,16 @@ function addTableRow(){ // adds new row & 5 columns to the table
 	for(var i = 0; i < colCount; i++) {
 		var newcell	= row.insertCell(i);// insert cell
 		newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+	}
+
+	var optionSize = $(table.rows.item(rowCount - 1).cells[0]).find('select').children('option').size();
+	for (var j = 0; j < rowCount - 1 ; j++){// to track table rows
+		for (var i = 1; i < optionSize ; i++){// to track options
+			// compares if any of the above dropdowns hava chosen value, if so, then hide
+			if($(table.rows.item(rowCount - 1).cells[0]).find('select').children('option')[i].text == $(table.rows.item(j).cells[0]).find('select').children(':selected').text()){
+				$(table.rows.item(rowCount - 1).cells[0]).find('select').children('option')[i].style.display="none";
+			}
+		}
 	}
 }
 
