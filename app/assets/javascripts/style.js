@@ -11,8 +11,9 @@ $(document).ready(function(){
 		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value != '' && document.getElementById("product_rate").value != ' '){
 			return true;	
 		}else {
-			alert("Please complete the details");
+			alert("Please complete the Product details");
     		e.preventDefault();
+    		return false;
     	}
 	});
 
@@ -20,10 +21,34 @@ $(document).ready(function(){
 		if(document.getElementById("invoice_customer_name").value != '' && document.getElementById("invoice_customer_name").value != ' ' && document.getElementById("invoice_customer_phone").value != '' && document.getElementById("invoice_customer_phone").value != ' ' && document.getElementById("invoice_customer_email").value != '' && document.getElementById("invoice_customer_email").value != ' '){
 			return true;	
 		}else {
-			alert("Please complete the details");
+			alert("Please complete the Invoice details");
     		e.preventDefault();
+    		return false;
     	}
+	});
 
+	$("#prevP").click(function(e){
+		var start = parseInt($('#startP').val());
+		var end = parseInt($('#endP').val());
+		if(	start >= 5){
+			start -= 5;
+			end -= 5;
+			$("#tableProduct > tbody > tr").hide().slice(start, end).show();
+			$('#startP').val(start.toString());
+			$('#endP').val(end.toString());
+		}
+	});
+
+	$("#nextP").click(function(e){
+		var start = parseInt($('#startP').val());
+		var end = parseInt($('#endP').val());
+		if(end < $("#tableProduct > tbody > tr").size()){
+			start += 5;
+			end += 5;
+			$("#tableProduct > tbody > tr").hide().slice(start, end).show();
+			$('#startP').val(start.toString());
+			$('#endP').val(end.toString());
+		}
 	});
 });
 
