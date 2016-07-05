@@ -26,14 +26,29 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :index, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if params[:product]
+      check = Product.find_by(:product_name => params[:product]["product_name"].capitalize)
+      if check.present?
+        puts "present"
+        respond_to do |format|
+          format.html { redirect_to @product, notice: 'Product already present.' }
+          format.json { render :index, status: :created, location: @product }
+        end
+      else # if thedata is not present
+        new_records = Array.new
+        new_records = {:product_name => params[:product]["product_name"].capitalize, :rate => params[:product]["rate"].to_f}
+        @productS = Product.new(new_records)
+
+        respond_to do |format|
+          if @productS.save
+            format.html { redirect_to @product, notice: 'Product was successfully created.' }
+            format.json { render :index, status: :created, location: @product }
+          else
+            format.html { render :new }
+            format.json { render json: @product.errors, status: :unprocessable_entity }
+          end
+        end
+      end # end of else
     end
   end
 

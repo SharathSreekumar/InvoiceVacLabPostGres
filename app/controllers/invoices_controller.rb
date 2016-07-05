@@ -6,7 +6,7 @@ class InvoicesController < ApplicationController
   def index
     @invoices = Invoice.all
     if params[:search]
-      @invoices = Invoice.search(params[:search])
+      @invoices = Invoice.search(params[:search]).order("invoice ASC")
     else
       @invoices = Invoice.select(:invoice).uniq
     end

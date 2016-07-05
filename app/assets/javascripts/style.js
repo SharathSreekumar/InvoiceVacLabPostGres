@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function(){
 	var startI = parseInt($('#start').val());
 	var endI = parseInt($('#end').val());
 	$("#tableInvoice > tbody > tr").hide().slice(startI, endI).show();
@@ -6,7 +6,26 @@ window.onload = function(){
 	var startP = parseInt($('#startP').val());
 	var endP = parseInt($('#endP').val());
 	$("#tableProduct > tbody > tr").hide().slice(startP, endP).show();
-};
+
+	$("#new_product").submit(function(e){ //form-id 
+		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value != '' && document.getElementById("product_rate").value != ' '){
+			return true;	
+		}else {
+			alert("Please complete the details");
+    		e.preventDefault();
+    	}
+	});
+
+	$("#new_invoice").submit(function(e){
+		if(document.getElementById("invoice_customer_name").value != '' && document.getElementById("invoice_customer_name").value != ' ' && document.getElementById("invoice_customer_phone").value != '' && document.getElementById("invoice_customer_phone").value != ' ' && document.getElementById("invoice_customer_email").value != '' && document.getElementById("invoice_customer_email").value != ' '){
+			return true;	
+		}else {
+			alert("Please complete the details");
+    		e.preventDefault();
+    	}
+
+	});
+});
 
 function onPrev(){
 	var start = parseInt($('#start').val());
@@ -128,18 +147,37 @@ function addTableRow(){ // adds new row & 5 columns to the table
 			}
 		}
 	}
+
+	if(optionSize - 1 == rowCount)
+		document.getElementById('addbtn').disabled = true;
 }
 
 function deleteTableRow(index){ // deletes the row that is selected by user
 	try {
 		var table = document.getElementById("newTable");
 		var rowCount = table.rows.length;
+		var optionSize = $(table.rows.item(rowCount - 1).cells[0]).find('select').children('option').size();
+		var pos = $(index).closest('tr').index();
+		if(optionSize > rowCount - 1)
+			document.getElementById('addbtn').disabled = false;
+
+
+
+		for (var j = 0; j < rowCount - 1 ; j++){// to track table rows
+			for (var i = 1; i < optionSize ; i++){// to track options
+			// compares if any of the above dropdowns hava chosen value, if so, then show
+				if($(table.rows.item(j).cells[0]).find('select').children('option')[i].text == $(table.rows.item(pos).cells[0]).find('select').children(':selected').text()){
+					$(table.rows.item(j).cells[0]).find('select').children('option')[i].style.display="block";
+				}
+			}
+		}
 
 		if(rowCount > 2){
 			table.deleteRow($(index).closest('tr').index());// fetch index of that row of the table
 		}else{
 			alert("No more rows to delete");
 		}
+		
 	}catch(e) {
 		alert("No more rows to delete");
 	}
