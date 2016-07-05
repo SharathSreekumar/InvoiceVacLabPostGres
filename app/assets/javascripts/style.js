@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$("#tableProduct > tbody > tr").hide().slice(startP, endP).show();
 
 	$("#new_product").submit(function(e){ //form-id 
-		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value != '' && document.getElementById("product_rate").value != ' '){
+		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value <= 0 ) {
 			return true;	
 		}else {
 			alert("Please complete the Product details");
@@ -36,6 +36,7 @@ $(document).ready(function(){
 			$("#tableProduct > tbody > tr").hide().slice(start, end).show();
 			$('#startP').val(start.toString());
 			$('#endP').val(end.toString());
+			e.preventDefault();
 		}
 	});
 
@@ -48,57 +49,36 @@ $(document).ready(function(){
 			$("#tableProduct > tbody > tr").hide().slice(start, end).show();
 			$('#startP').val(start.toString());
 			$('#endP').val(end.toString());
+			e.preventDefault();
+		}
+	});
+
+	$("#prevI").click(function(e){
+		var start = parseInt($('#start').val());
+		var end = parseInt($('#end').val());
+		if(	start >= 5){
+			start -= 5;
+			end -= 5;
+			$("#tableInvoice > tbody > tr").hide().slice(start, end).show();
+			$('#start').val(start.toString());
+			$('#end').val(end.toString());
+			e.preventDefault();
+		}
+	});
+
+	$("#nextI").click(function(e){
+		var start = parseInt($('#start').val());
+		var end = parseInt($('#end').val());
+		if(end < $("#tableInvoice > tbody > tr").size()){
+			start += 5;
+			end += 5;
+			$("#tableInvoice > tbody > tr").hide().slice(start, end).show();
+			$('#start').val(start.toString());
+			$('#end').val(end.toString());
+			e.preventDefault();
 		}
 	});
 });
-
-function onPrev(){
-	var start = parseInt($('#start').val());
-	var end = parseInt($('#end').val());
-	if(	start >= 5){
-		start -= 5;
-		end -= 5;
-		$("#tableInvoice > tbody > tr").hide().slice(start, end).show();
-		$('#start').val(start.toString());
-		$('#end').val(end.toString());
-	}	
-}
-
-function onNext(){
-	var start = parseInt($('#start').val());
-	var end = parseInt($('#end').val());
-	if(end < $("#tableInvoice > tbody > tr").size()){
-		start += 5;
-		end += 5;
-		$("#tableInvoice > tbody > tr").hide().slice(start, end).show();
-		$('#start').val(start.toString());
-		$('#end').val(end.toString());
-	}
-}
-
-function prevProd(){
-	var start = parseInt($('#startP').val());
-	var end = parseInt($('#endP').val());
-	if(	start >= 5){
-		start -= 5;
-		end -= 5;
-		$("#tableProduct > tbody > tr").hide().slice(start, end).show();
-		$('#startP').val(start.toString());
-		$('#endP').val(end.toString());
-	}	
-}
-
-function nextProd(){
-	var start = parseInt($('#startP').val());
-	var end = parseInt($('#endP').val());
-	if(end < $("#tableProduct > tbody > tr").size()){
-		start += 5;
-		end += 5;
-		$("#tableProduct > tbody > tr").hide().slice(start, end).show();
-		$('#startP').val(start.toString());
-		$('#endP').val(end.toString());
-	}
-}
 
 function searchBox(){
 	if ($('#search').val() == null || $('#search').val() == ""){

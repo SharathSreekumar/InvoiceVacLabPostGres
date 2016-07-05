@@ -11109,3 +11109,720 @@ Completed 200 OK in 387ms (Views: 384.3ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/assets/style.self-54641f1397bca46f874f047685bd03e8a8ad51bfd93bf4523e993f6b4096ec47.js?body=1" for ::1 at 2016-07-05 17:07:57 +0530
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:11:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY rate asc
+  Rendered products/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 1546ms (Views: 1484.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-05 17:11:52 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/style.self-7ab49543acc8ef53fc2037c9cd60c8898f44aa7f7180ebc5e6697574c6dfa043.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-05 17:11:53 +0530
+
+
+Started GET "/invoices" for ::1 at 2016-07-05 17:11:54 +0530
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (2.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices"[0m
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 183ms (Views: 170.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:11:56 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY rate asc
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 128ms (Views: 125.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:13:42 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY rate asc[0m
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 479ms (Views: 477.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/style.self-98ed300a2bc4250db07824e9b61b44c0bfe4d5805992955701f38bd373c4bbf8.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-05 17:13:43 +0530
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:14:22 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY rate asc
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 380ms (Views: 378.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/style.self-f4bdb22e0c3022c87e6d9a5f05d680754884620cbe7e4a7a83a385a2f104d328.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-05 17:14:23 +0530
+
+
+Started GET "/invoices" for ::1 at 2016-07-05 17:14:27 +0530
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices"[0m
+  [1m[35mInvoice Load (2.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 149ms (Views: 144.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:14:30 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY rate asc
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 144ms (Views: 141.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices" for ::1 at 2016-07-05 17:14:32 +0530
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (0.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices"[0m
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 144ms (Views: 142.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:14:35 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (81.1ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (116.1ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 81.1ms)
+
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...RE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___300928232_70757232'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (175.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (309.2ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:19:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (3.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...RE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR customer_phone LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___440224279_51347616'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (140.1ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:20:20 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[36mInvoice Load (3.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC[0m
+  Rendered invoices/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 1334ms (Views: 1319.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-05 17:20:21 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/style.self-f4bdb22e0c3022c87e6d9a5f05d680754884620cbe7e4a7a83a385a2f104d328.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-05 17:20:22 +0530
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:20:24 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 132ms (Views: 130.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices" for ::1 at 2016-07-05 17:20:27 +0530
+Processing by InvoicesController#index as HTML
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices"[0m
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 157ms (Views: 148.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV001" for ::1 at 2016-07-05 17:20:33 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV001"}
+  [1m[35mInvoice Load (0.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV001%' OR product LIKE '%INV001%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 187ms (Views: 186.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=sharathsreekumar10%40gmail.com" for ::1 at 2016-07-05 17:20:43 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sharathsreekumar10@gmail.com"}
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%sharathsreekumar10@gmail.com%' OR product LIKE '%sharathsreekumar10@gmail.com%')  ORDER BY invoice ASC[0m
+  [1m[35mInvoice Load (0.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 149ms (Views: 145.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:21:09 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (2.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR product LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 147ms (Views: 143.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=7875" for ::1 at 2016-07-05 17:21:42 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"7875"}
+  [1m[36mInvoice Load (2.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%7875%' OR product LIKE '%7875%' OR customer_phone LIKE '%7875%')  ORDER BY invoice ASC[0m
+  Rendered invoices/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...7875%' OR product LIKE '%7875%' OR customer_phone LIKE '%787...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%7875%' OR product LIKE '%7875%' OR customer_phone LIKE '%7875%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___440224279_51347616'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.1ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:22:21 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (2.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ..."."invoice" FROM "invoices" WHERE (customer_phone LIKE '%INV...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone LIKE '%INV%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___440224279_51347616'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.1ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=sharathsreekumar10%40gmail.com" for ::1 at 2016-07-05 17:22:32 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sharathsreekumar10@gmail.com"}
+  [1m[36mInvoice Load (64.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone = '%sharathsreekumar10@gmail.com%')  ORDER BY invoice ASC[0m
+  Rendered invoices/index.html.erb within layouts/application (73.0ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 66.0ms)
+
+ActionView::Template::Error (PG::InvalidTextRepresentation: ERROR:  invalid input syntax for integer: "%sharathsreekumar10@gmail.com%"
+LINE 1: ..."invoice" FROM "invoices" WHERE (customer_phone = '%sharaths...
+                                                             ^
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone = '%sharathsreekumar10@gmail.com%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___440224279_51347616'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.1ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=7875223701" for ::1 at 2016-07-05 17:22:46 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"7875223701"}
+  [1m[35mInvoice Load (2.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone = '%7875223701%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (PG::InvalidTextRepresentation: ERROR:  invalid input syntax for integer: "%7875223701%"
+LINE 1: ..."invoice" FROM "invoices" WHERE (customer_phone = '%78752237...
+                                                             ^
+: SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone = '%7875223701%')  ORDER BY invoice ASC):
+    48:                     </tr>
+    49:                   </thead>
+    50:                   <tbody><!-- display invoice & other details -->
+    51:                     <% @invoices.each do |invoice| %>
+    52:                       <% @subInvoice = Invoice.where("invoice =?",invoice.invoice) %>
+    53:                       <% prod = ""; name = ""; totalAmount = 0; date = ""; length = @subInvoice.all.length; i = 0 %>
+    54:                       <% @subInvoice.each do |sub| %>
+  app/views/invoices/index.html.erb:51:in `_app_views_invoices_index_html_erb___440224279_51347616'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.1ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=7875223701" for ::1 at 2016-07-05 17:23:06 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"7875223701"}
+  [1m[36mInvoice Load (0.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_phone = '7875223701')  ORDER BY invoice ASC[0m
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 155ms (Views: 145.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/bootstrap-theme.self-f21abf07f6cbb5003667049ff41842cce014726b4c205c4b9074e34c55aa17cd.css?body=1" for ::1 at 2016-07-05 17:23:06 +0530
+
+
+Started GET "/assets/bootstrap-theme.min.self-0ac8d56da2fe8adf414118810c16dd9d15d915e2ca39a3930070ef3277fc1bc7.css?body=1" for ::1 at 2016-07-05 17:23:06 +0530
+
+
+Started GET "/assets/bootstrap.self-fc22319bcce001e8eac9a5c12a829fa5d51743dbb8a31c9b40cf2f59d530dd15.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/bootstrap.min.self-be6a645f213f356601ff235da5760f5080076f6168dec3d19d33587edbf75b95.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/scaffolds.self-05b4d9bab810fef3f9834ddce140fe25df69074bd994872623fab9c20d5478b5.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/invoices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/style.self-fa5e9412a2ea96c33aee3b5bd240fb26c3958dfa41a2c01c42e0803097a89a3b.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/bootstrap.self-aa035a144857819aa990a2630f4c251b0bfb37d227f16a2c6ac1b7efd656baac.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/bootstrap.min.self-f2d64b74536a49f843b022431e37325973468a71c9b362343deb0b6c582e5ba0.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/invoices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/jquery-1.11.2.min.self-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/jquery.easings.min.self-54f1a41ba1d8af4ef743797daf066979746734b76c920f36256fc1d7869f1c10.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/style.self-f4bdb22e0c3022c87e6d9a5f05d680754884620cbe7e4a7a83a385a2f104d328.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-05 17:23:07 +0530
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=7875223701" for ::1 at 2016-07-05 17:28:43 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"7875223701"}
+  [1m[35mInvoice Load (0.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%7875223701%' OR product LIKE '%7875223701%' OR CAST(customer_phone AS TEXT) LIKE '%7875223701%')  ORDER BY invoice ASC
+  [1m[36mInvoice Load (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  Rendered invoices/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 171ms (Views: 163.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=sharathsreekumar" for ::1 at 2016-07-05 17:28:48 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sharathsreekumar"}
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%sharathsreekumar%' OR product LIKE '%sharathsreekumar%' OR CAST(customer_phone AS TEXT) LIKE '%sharathsreekumar%')  ORDER BY invoice ASC[0m
+  [1m[35mInvoice Load (2.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  Rendered invoices/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 139ms (Views: 135.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:28:53 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR product LIKE '%INV%' OR CAST(customer_phone AS TEXT) LIKE '%INV%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 134ms (Views: 132.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=001" for ::1 at 2016-07-05 17:28:57 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"001"}
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%001%' OR product LIKE '%001%' OR CAST(customer_phone AS TEXT) LIKE '%001%')  ORDER BY invoice ASC[0m
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 141ms (Views: 139.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=I" for ::1 at 2016-07-05 17:29:02 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"I"}
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%I%' OR product LIKE '%I%' OR CAST(customer_phone AS TEXT) LIKE '%I%')  ORDER BY invoice ASC
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 151ms (Views: 148.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=INV" for ::1 at 2016-07-05 17:29:06 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"INV"}
+  [1m[36mInvoice Load (1.0ms)[0m  [1mSELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%INV%' OR product LIKE '%INV%' OR CAST(customer_phone AS TEXT) LIKE '%INV%')  ORDER BY invoice ASC[0m
+  Rendered invoices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 130ms (Views: 129.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/invoices?utf8=%E2%9C%93&search=2%22" for ::1 at 2016-07-05 17:29:24 +0530
+Processing by InvoicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"2\""}
+  [1m[35mInvoice Load (0.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices" WHERE (customer_email LIKE '%2"%' OR product LIKE '%2"%' OR CAST(customer_phone AS TEXT) LIKE '%2"%')  ORDER BY invoice ASC
+  [1m[36mInvoice Load (2.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  Rendered invoices/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 141ms (Views: 137.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for ::1 at 2016-07-05 17:29:41 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY rate asc[0m
+  Rendered products/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 163ms (Views: 155.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/invoices" for ::1 at 2016-07-05 17:29:41 +0530
+Processing by InvoicesController#index as HTML
+  [1m[35mInvoice Load (1.0ms)[0m  SELECT DISTINCT "invoices"."invoice" FROM "invoices"
+  [1m[36mInvoice Load (2.0ms)[0m  [1mSELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "invoices".* FROM "invoices" WHERE (invoice ='INV001')
+  Rendered invoices/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 163ms (Views: 159.1ms | ActiveRecord: 3.0ms)
