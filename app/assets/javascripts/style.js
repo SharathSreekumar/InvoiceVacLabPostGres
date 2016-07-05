@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$("#tableProduct > tbody > tr").hide().slice(startP, endP).show();
 
 	$("#new_product").submit(function(e){ //form-id 
-		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value <= 0 ) {
+		if(document.getElementById("product_product_name").value != '' && document.getElementById("product_product_name").value != ' ' && document.getElementById("product_rate").value > 0 ) {
 			return true;	
 		}else {
 			alert("Please complete the Product details");
